@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+/* Editor Container */
+.MarkdownEditor {
+  font-family: 'Poppins', sans-serif;
+  margin: 40px auto;
+  padding: 40px;
+  max-width: 900px;
+  background-color: #ffffff;
+  border: 3px solid #06396b;
+  border-radius: 10px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  color: #222;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Preview Title */
+h2 {
+  margin-bottom: 10px;
+  color: #000;
+  display: inline;
+  margin-right: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-align: left;
+}
+
+/* Textarea Styling */
+textarea {
+  width: 100%;
+  margin: 20px 0;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 3px solid #06396b;
+  background-color: #f4f7fa;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  resize: vertical;
+  outline: none;
+  box-sizing: border-box;
+  transition: none;
+}
+
+textarea:focus {
+  border-color: #06396b;
+  box-shadow: 0 0 5px rgba(99, 169, 255, 0.3);
+}
+
+textarea:hover {
+  border-color: #06396b;
+}
+
+textarea::placeholder {
+  color: #b3b9c1;
+  font-style: italic;
+  opacity: 1;
+}
+
+/* Scrollable Preview */
+.preview {
+  background-color: #f4f7fa;
+  padding: 24px;
+  border-radius: 10px;
+  border: 3px solid #06396b;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  max-width: 1100px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Button Styles */
+button.convert-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px 28px;
+  background-color: #06396b;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.convert-btn:hover {
+  background-color: #06396b;
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+button.convert-btn:disabled {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+}
+
+button.convert-btn i {
+  margin-right: 10px;
+}
+
+/* Drag & Drop Area */
+.drag-drop-area {
+  margin: 20px auto 0;
+  padding: 24px;
+  background-color: #f4f6fb;
+  border: 3px dashed #06396b;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.drag-drop-area:hover {
+  background-color: #eaf4ff;
+  transform: scale(1.02);
+}
+
+.drag-drop-area.dragging {
+  background-color: #d6f2ff;
+}
+
+.drag-drop-area i {
+  margin-right: 10px;
+}
+
+/* File Input */
+input[type="file"] {
+  display: none;
+}
+
+/* Clean PDF Style */
+.pdf-clean {
+  padding: 0;
+  margin: 0;
+  border: none !important;
+  background: white;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+
+/* Dark Mode Styles */
+body.dark-theme {
+  background-color: #121212;
+}
+
+body.dark-theme .MarkdownEditor {
+  background-color: #121212;
+  color: #fff;
+  border-color: #444;
+}
+
+body.dark-theme .markdown-body {
+  background-color: #1c1c1c;
+  color: #f5f5f5;
+}
+
+body.dark-theme h1 {
+  color: #fff;
+}
+
+body.dark-theme h2 {
+  color: #fff;
+}
+
+body.dark-theme .drag-drop-area {
+  background-color: #333;
+  border: 2px dashed #f5f5f5;
+  color: #fff;
+}
+
+body.dark-theme .drag-drop-area:hover {
+  background-color: #444;
+}
+
+body.dark-theme textarea {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-theme .convert-btn {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark-theme .convert-btn:disabled {
+  background-color: #666;
+}
+
+/* Light Mode Styles */
+body.light-theme .MarkdownEditor {
+  background-color: #ffffff;
+  color: #000;
+  border-color: #06396b;
+}
+
+body.light-theme .markdown-body {
+  background-color: #f4f7fa;
+  color: #000;
+}
+
+body.light-theme h1 {
+  color: #222;
+}
+
+body.light-theme h2 {
+  color: #000;
+}
+
+body.light-theme .drag-drop-area {
+  background-color: #f4f6fb;
+  border: 2px dashed #035dbd;
+  color: #000;
+}
+
+body.light-theme .drag-drop-area:hover {
+  background-color: #eaf4ff;
+}
+
+body.light-theme textarea {
+  background-color: #fafbfc;
+  color: #000;
+}
+
+body.light-theme .convert-btn {
+  background-color: #06396b;
+  color: #fff;
+}
+
+body.light-theme .convert-btn:disabled {
+  background-color: #c0c0c0;
+}
+/* Global styles for dark theme */
+.dark-theme .pdf-dark-mode {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+  text-align: left;
+}
+
+.markdown-body th {
+  background-color: #f0f0f0;
+}
