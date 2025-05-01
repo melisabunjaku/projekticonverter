@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Base Styles */
+
 body {
   margin: 0;
   padding: 0;
@@ -9,15 +9,14 @@ body {
   transition: background-color 0.3s ease;
 }
 
-/* Editor Container */
 .MarkdownEditor {
   font-family: 'Poppins', sans-serif;
   margin: 40px auto;
   padding: 40px;
   max-width: 900px;
   background-color: #ffffff;
-  border: 3px solid #06396b;
-  border-radius: 10px;
+  border: 7px solid #06396b;
+
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
   transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -26,8 +25,9 @@ body {
 /* Headings */
 h1 {
   font-size: 2.5rem;
-  color: #222;
+  color: #06396b;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   margin-bottom: 30px;
 }
@@ -43,13 +43,13 @@ h2 {
   text-align: left;
 }
 
-/* Textarea Styling */
+
 textarea {
   width: 100%;
   margin: 20px 0;
   padding: 16px 20px;
-  border-radius: 12px;
-  border: 3px solid #06396b;
+ 
+  border: 5px solid #06315c;
   background-color: #f4f7fa;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
@@ -59,14 +59,8 @@ textarea {
   transition: none;
 }
 
-textarea:focus {
-  border-color: #06396b;
-  box-shadow: 0 0 5px rgba(99, 169, 255, 0.3);
-}
 
-textarea:hover {
-  border-color: #06396b;
-}
+
 
 textarea::placeholder {
   color: #b3b9c1;
@@ -74,7 +68,6 @@ textarea::placeholder {
   opacity: 1;
 }
 
-/* Scrollable Preview */
 .preview {
   background-color: #f4f7fa;
   padding: 24px;
@@ -93,16 +86,16 @@ textarea::placeholder {
   overflow-y: auto;
 }
 
-/* Button Styles */
+
 button.convert-btn {
-  width: 100%;
+  width: auto; 
   margin-top: 20px;
-  padding: 14px 28px;
+  padding: 14px 40px; 
   background-color: #06396b;
   color: #fff;
   border: none;
-  border-radius: 10px;
-  font-size: 16px;
+  border-radius: 30px; 
+  font-size: 18px; 
   font-weight: 600;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
@@ -125,13 +118,13 @@ button.convert-btn i {
   margin-right: 10px;
 }
 
-/* Drag & Drop Area */
+
 .drag-drop-area {
   margin: 20px auto 0;
   padding: 24px;
   background-color: #f4f6fb;
-  border: 3px dashed #06396b;
-  border-radius: 10px;
+  border: 3px solid #06396b;
+ 
   text-align: center;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
@@ -154,12 +147,12 @@ button.convert-btn i {
   margin-right: 10px;
 }
 
-/* File Input */
+
 input[type="file"] {
   display: none;
 }
 
-/* Clean PDF Style */
+
 .pdf-clean {
   padding: 0;
   margin: 0;
@@ -247,10 +240,20 @@ body.light-theme .drag-drop-area:hover {
   background-color: #eaf4ff;
 }
 
+
 body.light-theme textarea {
   background-color: #fafbfc;
   color: #000;
+  border-color: #06315c; 
 }
+
+
+body.dark-theme textarea {
+  background-color: #1e1e1e;
+  color: #fff;
+  border-color: #fff; 
+}
+
 
 body.light-theme .convert-btn {
   background-color: #06396b;
@@ -260,7 +263,7 @@ body.light-theme .convert-btn {
 body.light-theme .convert-btn:disabled {
   background-color: #c0c0c0;
 }
-/* Global styles for dark theme */
+
 .dark-theme .pdf-dark-mode {
   background-color: #121212 !important;
   color: #ffffff !important;

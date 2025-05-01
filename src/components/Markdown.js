@@ -208,17 +208,19 @@ function Markdown({ markdown, setMarkdown }) {
       />
       <h2>Preview</h2>
       <div
-        className="preview markdown-body"
-        ref={printableRef}
-        dangerouslySetInnerHTML={{ __html: previewHtml }}
-        style={{
-          maxHeight: '400px',
-          overflowY: 'auto',
-          padding: '20px',
-          border: '1px solid #ddd',
-          borderRadius: '4px',
-        }}
-      />
+  className="preview markdown-body"
+  ref={printableRef}
+  dangerouslySetInnerHTML={{ __html: previewHtml }}
+  style={{
+    maxHeight: '400px',
+    overflowY: 'auto',
+    padding: '20px',
+    border: '1px solid #ddd',
+    borderRadius: '4px',
+    textAlign: 'left', 
+  }}
+/>
+
 
       <button
         onClick={handleConvertToPDF}
